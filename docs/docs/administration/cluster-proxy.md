@@ -132,6 +132,12 @@ public:
     url: 'https://bbb-01.example.com/pad'
 ```
 
+You may use yq to merge the new settings:
+
+```
+yq eval -i '. *+ load("/tmp/bbb-html5.yml")' /etc/bigbluebutton/bbb-html5.yml
+``
+
 Copy `/usr/share/bigbluebutton/nginx/bbb-html5.nginx.static` to
 `/usr/share/bigbluebutton/nginx/bbb-html5-cluster.nginx` and prepend the mount
 point of bbb-html5 in all location sections:
