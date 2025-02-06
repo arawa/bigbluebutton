@@ -100,7 +100,7 @@ For each BigBlueButton server in your cluster, repeat the following steps:
 Add these options to `/etc/bigbluebutton/bbb-web.properties`:
 
 ```ini
-defaultHTML5ClientUrl=https://bbb-proxy.example.com/bbb-01/html5client
+defaultHTML5ClientUrl=https://bbb-proxy.example.com/bbb-01/html5client/
 presentationBaseURL=https://bbb-01.example.com/bigbluebutton/presentation
 accessControlAllowOrigin=https://bbb-proxy.example.com
 graphqlWebsocketUrl=wss://bbb-01.example.com/graphql
@@ -177,7 +177,7 @@ Create the file `/etc/bigbluebutton/etherpad.json` with the following content:
 Adjust the CORS settings in `/etc/default/bbb-web`:
 
 ```shell
-JDK_JAVA_OPTIONS="-Dgrails.cors.enabled=true -Dgrails.cors.allowCredentials=true -Dgrails.cors.allowedOrigins=https://bbb-proxy.example.com,https://https://bbb-01.example.com"
+JDK_JAVA_OPTIONS="-Dgrails.cors.enabled=true -Dgrails.cors.allowCredentials=true -Dgrails.cors.allowedOrigins=https://bbb-proxy.example.com,https://bbb-01.example.com"
 ```
 
 Create the file `/etc/bigbluebutton/bbb-graphql-middleware.yml` with the following content:
